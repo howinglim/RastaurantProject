@@ -1,0 +1,66 @@
+<!--<HTML><BODY>
+<H1>Showing <%= c.length %> Cafes</H1>
+<ol>
+  <% c.forEach(function(cafe) { %>
+  <li><a href=/showonmap?id=<%= cafe.id %>><%= cafe.name %></a></li>
+  <% });                        %>
+<ol>
+ <form ref='uploadForm'
+            id='uploadForm'
+            action='http://localhost:8099/upload'
+            method='post'
+            encType="multipart/form-data">
+                <input type="file" name="sampleFile" />
+                <input type='submit' value='Upload!' />
+        </form>		
+</BODY></HTML>
+-->
+
+<!--<HTML><BODY>
+<H1>Showing <%= c.length %> Cafes</H1>
+
+<ol>
+  <% c.forEach(function(cafe) { %>
+  <li><a href=/showonmap?id=<%= cafe.id %>><%= cafe.name %></a></li>
+  <% });                        %>
+<ol>
+ 
+</BODY></HTML>
+-->
+
+<html>
+<head>
+  <title>Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+<header class="w3-container w3-teal">
+  <h1>Restaurants</h1>
+  
+    <p>User: <%= c[0].name %></p>
+  
+  <p>Showing <%= c.length %> documents
+  </p>
+</header>
+<div class="w3-container">
+<a href="/new" style="text-decoration: none">
+  <button class="w3-btn">New</button>
+</a>
+</div>
+<br>
+<div class="w3-container">
+  <ul class="w3-ul w3-large">
+  <% c.forEach(function(cafe) { %>
+<li><a href=/restaurantinfo?name=<%= cafe.name %>><%= cafe.name %></a></li>
+    <% console.log('cafe: '+cafe.name); });    console.log('c :'+c[0].name);                   %>
+  
+  </ul>
+</div>
+<p>
+
+
+
+
+</body>
+</html>
